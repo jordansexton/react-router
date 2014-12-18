@@ -427,12 +427,12 @@ function createRouter(options) {
 
       teardown: function() {
         location.removeChangeListener(this.changeListener);
+      },
+
+      reset: function() {
+        state = {};
       }
 
-    },
-
-    reset: function() {
-      state = {};
     },
 
     propTypes: {
