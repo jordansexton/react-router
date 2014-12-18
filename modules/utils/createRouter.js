@@ -170,11 +170,12 @@ function createRouter(options) {
       'the router will not be kept in sync with the current URL'
     );
   } else {
-    invariant(
-      canUseDOM,
-      'You cannot use %s without a DOM',
-      location
-    );
+    //TODO: let the location decide whether it can be used instead of saying no to everyone here
+    //invariant(
+      //canUseDOM,
+      //'You cannot use %s without a DOM',
+      //location
+    //);
   }
 
   // Automatically fall back to full page refreshes in
