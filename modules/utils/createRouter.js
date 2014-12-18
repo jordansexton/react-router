@@ -184,7 +184,7 @@ function createRouter(options) {
 
   var router = React.createClass({
 
-    displayName: 'Router',
+    displayName: options.displayName || 'Router',
 
     mixins: [ NavigationContext, StateContext, Scrolling ],
 
@@ -428,6 +428,10 @@ function createRouter(options) {
         location.removeChangeListener(this.changeListener);
       }
 
+    },
+
+    reset: function() {
+      state = {};
     },
 
     propTypes: {
