@@ -470,6 +470,12 @@ function createRouter(options) {
       router.teardown();
     },
 
+    getDefaultProps: function() {
+      return {
+        ref: "routeHandler"
+      }
+    },
+
     render: function () {
       return this.getRouteAtDepth(0) ? React.createElement(RouteHandler, this.props) : null;
     },
